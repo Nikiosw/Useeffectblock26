@@ -3,7 +3,7 @@ import './App.css'
 import ContactList from './components/ContactList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [Contact, setContact] = useState(dummyContacts)
 
   return (
     <>
