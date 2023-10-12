@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import ContactRow from './ContactRow';
 
 const dummyContacts= [
     {id: 1, name: "R2-D2", phone: "222-222-222", email: "r2d2@droids.com"},
@@ -24,8 +25,10 @@ export default function ContactList(){
                     <td>Phone</td>
                 </tr>
                 {
+                   contacts.map((contact)=>{
+                    return <ContactRow key ={contact.id} contact= {contact}/>
+                   })
                    
-                   //map over data here
                 }
             </tbody>
         </table>
